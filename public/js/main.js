@@ -20825,8 +20825,27 @@ var List = React.createClass({
 module.exports = List;
 
 },{"./ListItem.jsx":183,"react":181}],183:[function(require,module,exports){
+var React = require('react');
 
-},{}],184:[function(require,module,exports){
+var ListItem = React.createClass({
+    displayName: 'ListItem',
+
+    render: function () {
+        return React.createElement(
+            'li',
+            null,
+            React.createElement(
+                'h4',
+                null,
+                this.props.ingredient
+            )
+        );
+    }
+});
+
+module.exports = ListItem;
+
+},{"react":181}],184:[function(require,module,exports){
 var React = require('react');
 var ReactDOM = require('react-dom');
 var List = require('./components/List.jsx');
